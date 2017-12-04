@@ -1,6 +1,6 @@
 ---
 nav_include: 2
-title: Display the ROC curve for both the fitted classifier and the all 0's classifier on the test set.
+title: Models
 notebook: model_Group50.ipynb
 ---
 
@@ -9,7 +9,7 @@ notebook: model_Group50.ipynb
 *  
 {: toc}
 
-## Group 50
+## MOdels
 
 ## 0. Import libraries
 

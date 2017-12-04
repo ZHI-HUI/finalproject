@@ -1,6 +1,6 @@
 ---
 nav_include: 1
-title: Heatmap
+title: EDA
 notebook: EDA_Group50.ipynb
 ---
 
@@ -9,7 +9,7 @@ notebook: EDA_Group50.ipynb
 *  
 {: toc}
 
-## Group 50
+## EDA
 
 ## 0. Import libraries
 
