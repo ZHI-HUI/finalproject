@@ -9,7 +9,7 @@ notebook: model_Group50.ipynb
 *  
 {: toc}
 
-## MOdels
+## Models
 
 ## 0. Import libraries
 

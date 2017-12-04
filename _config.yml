@@ -1,6 +1,6 @@
 theme: jekyll-theme-primer
-title: Support Vector Olives
-description: Keeping Italian Olives Pure!
+title: Project summary
+description: This project is to build and evaluate classification models to predict reversion from mild cognitive impairment (MCI) to normal cognitive functioning within 2 years (a binary outcome) using the ADNI (Alzheimer’s Disease Neuroimaging Initiative) database.
 baseurl:
 markdown: kramdown
 kramdown:
