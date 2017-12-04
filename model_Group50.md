@@ -427,6 +427,7 @@ models
 
 
 ```python
+sns.set_context('poster')
 fpr1, tpr1, thresholds1 = metrics.roc_curve(y_test, adaboost.predict_proba(x_test)[:,1])
 fpr2, tpr2, thresholds2 = metrics.roc_curve(y_test, np.zeros(len(y_test)))
 auc1 = metrics.roc_auc_score(y_test, adaboost.predict_proba(x_test)[:,1])
