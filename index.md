@@ -40,7 +40,6 @@ We had originally proposed to develop a machine learning model for predicting pr
 					 				
 ## 4. Results, Conclusions, and Future Work: 
 
-Show and interpret your results. Summarize your results, the strengths and short-comings of your results, and speculate on how you might address these short-comings if given more time.
 Preliminary EDA was conducted on pre-selected predictors. For continuous predictors, the probability of MCI reversing to normal was positively associated with homocysteine levels, baseline AVLT score, baseline animal fluency score, baseline beta-amyloid levels, baseline tau levels, and baseline phospho-tau levels, and negatively associated with age and baseline ADAS-cog/13 score. For binary/categorical predictors, females had a lower probability of MCI reversion as compared to males; widowed people had a lowest probability of MCI reversion, followed by married and divorced people. Increased copy of APOE4 allele was associated with lower probability of MCI reversion.
 
-Among the six classification models, the AdaBoost classifier has the highest TPR of 0.6 and the highest test AUC of 0.88. 
+Among the six classification models, the AdaBoost classifier with optimal maximum depth of 2 and optimal number of trees of 16 has the highest TPR of 0.6 and the highest test AUC of 0.88. Therefore, the AdaBoost classifier was selected as our final model.
