@@ -7,14 +7,14 @@ title: "Mild Cognitive Impairment (MCI) reversion prediciton with Alzheimer's Di
 *  
 {: toc}
 
-![jpg](_pic/brain.jpg)
+![jpg](index_files/brain.jpg)
 Source: iLexx/iStock
 
 ## 0. Problem Statement and Motivation: 
 Problem Statement and Motivation: 
 In the current project, we plan to build and evaluate classification models to predict reversion from mild cognitive impairment (MCI) to normal cognitive functioning within 2 years using the ADNI (Alzheimer’s Disease Neuroimaging Initiative) database. MCI is defined as a transitional state between normal cognition and dementia. Much of the existing literature has aimed to determine the predictors of conversion from MCI to dementia, however, many MCI patients do not progress to AD and up to 55% revert back to a cognitively normal state. It is therefore crucial to identify important predictors of a good prognosis among patients with MCI, which may inform intervention targets. 						 			
 
-![png](_pic/mci.png)
+![png](index_files/mci.png)
 
 
 ## 1. Introduction and Description of Data:
@@ -22,7 +22,7 @@ MCI, a high risk condition for dementia, is regarded as a transitional state bet
 
 The goal of the Alzheimer’s Disease Neuroimaging Initiative (ADNI) study is to track the progression of the disease over different disease stages. The study has three phases: ADNI 1 (five years), ADNI GO (two years), and ADNI 2 (five years). A total of 400 MCI patients were enrolled at the baseline of the ADNI 1 phase and 300 new MCI patients (including 150 early MCI and 150 late MCI) were enrolled at the baseline of the ADNI 2 phase. The definition of MCI used by ADNI was based on the following criteria: (1) subjective memory complaint; (2) Mini-Mental State Examination (MMSE) scores of 24-30; (3) global Clinical Dementia Rating = 0.5; (4) abnormal memory function; (5) did not meet AD criteria for deterioration in general cognitive and functional performance. After exclusion, 400 MCI patients (187 for ADNI 1 and 213 for ADNI 2) that were followed for at least two years and did not develop AD within the time period were included for analyses.
 
-![png](_pic/adni.png)
+![png](index_files/adni.png)
 Source: ADNI, http://adni.loni.usc.edu/
 
 ## 2. Literature Review/Related Work: 
@@ -40,7 +40,7 @@ After a thorough literature review, potential diagnostic and non-diagnostic pred
 **5) Neuroimaging biomarkers:** baseline fluorodeoxyglucose 18F uptake on brain positron emission tomography (FDG-PET) (Park, 2015);<br>
 **6) Cerebrospinal fluid (CSF) biomarkers:** baseline CSF amyloid-β 1 to 42 peptide (Aβ42), total tau, phosphorylated tau and APOE4 genotype (Sachdev, 2013; Thomas, 2017; Park, 2015).<br>
 
-![png](_pic/adni2.png)
+![png](index_files/adni2.png)
 Source: ADNI, http://adni.loni.usc.edu/
 
 ## 3. Modeling Approach and Project Trajectory: 
