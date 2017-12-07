@@ -1,5 +1,8 @@
 ---
 title: "Mild Cognitive Impairment (MCI) reversion prediciton with Alzheimer's Disease Neuroimaigng Initiative (ADNI) database"
+
+Team: Group 50
+Team Members: Qianyu Yuan, Yuxi Liu, Min-Jung Wang, Zhihui Wang
 ---
 
 ## Contents
