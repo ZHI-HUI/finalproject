@@ -1,5 +1,5 @@
 ---
-title: "MCI reversion prediciton with Alzheimer's Disease Neuroimaigng Initiative databse"
+title: "Mild Cognitive Impairment (MCI) reversion prediciton with Alzheimer's Disease Neuroimaigng Initiative (ADNI) databse"
 ---
 
 ## Contents
@@ -8,6 +8,7 @@ title: "MCI reversion prediciton with Alzheimer's Disease Neuroimaigng Initiativ
 {: toc}
 
 ![jpg](_pic/brain.jpg)
+Source: iLexx/iStock
 
 ## 0. Problem Statement and Motivation: 
 Problem Statement and Motivation: 
@@ -15,11 +16,14 @@ In the current project, we plan to build and evaluate classification models to p
 
 ![png](_pic/mci.png)
 
+
 ## 1. Introduction and Description of Data:
 MCI, a high risk condition for dementia, is regarded as a transitional state between cognitive normal	and dementia. Prevalence of MCI reversion to normal has varied widely, ranging from 4 to 55%, and multiple explanations are proposed for this variability, including individuals being misclassified initially, having unstable MCI, and having true improvements in cognitive functioning upon follow-up. Identifying which individuals classified as MCI are more likely to revert could help optimise resource allocation among MCI patients, with those considered least likely to revert receiving greater levels of intervention and follow-up contact. Therefore, the aim of this project is to build predictive model for MCI reversion using a wide range of predictors including socio-demographic, clinical, genetic, imaging characteristics, and biospecimen biomarkers. 
 
 The goal of the Alzheimer’s Disease Neuroimaging Initiative (ADNI) study is to track the progression of the disease over different disease stages. The study has three phases: ADNI 1 (five years), ADNI GO (two years), and ADNI 2 (five years). A total of 400 MCI patients were enrolled at the baseline of the ADNI 1 phase and 300 new MCI patients (including 150 early MCI and 150 late MCI) were enrolled at the baseline of the ADNI 2 phase. The definition of MCI used by ADNI was based on the following criteria: (1) subjective memory complaint; (2) Mini-Mental State Examination (MMSE) scores of 24-30; (3) global Clinical Dementia Rating = 0.5; (4) abnormal memory function; (5) did not meet AD criteria for deterioration in general cognitive and functional performance. After exclusion, 400 MCI patients (187 for ADNI 1 and 213 for ADNI 2) that were followed for at least two years and did not develop AD within the time period were included for analyses.
 
+![png](_pic/adni.png)
+Source: ADNI, http://adni.loni.usc.edu/
 
 ## 2. Literature Review/Related Work: 
 Conversion from MCI to cognitively normal (CN) is commonly observed in the population, and several explanations for this phenomenon have been proposed in the existing literature. It has been reported that patients who revert from MCI to CN, or MCI-reverters, may have a temporary decline in cognitive functioning due to poor mental health (e.g. depression or stress related conditions/disorders) (Kumar, 2006; Olazaran, 2011) or physical health (Wisotsky, 1965). Others have postulated that these unstable MCI states are mis-labeled as MCI, and are in fact pre-MCI conditions that only develop to stable MCI under certain conditions or exposures (Petersen, 2011). Furthermore, it is possible that there are true causes of MCI that are reversible, such as metabolic disorders or acute conditions (e.g. brain injury, substance abuse) that may improve over time, leading to subsequent reversion back to CN. Lastly, pharmacological interventions, lifestyle factors, including diet and physical activity, and baseline health may be true predictors of a better MCI prognosis (Olazaran, 2011). 
@@ -36,6 +40,8 @@ After a thorough literature review, potential diagnostic and non-diagnostic pred
 **5) Neuroimaging biomarkers:** baseline fluorodeoxyglucose 18F uptake on brain positron emission tomography (FDG-PET) (Park, 2015);<br>
 **6) Cerebrospinal fluid (CSF) biomarkers:** baseline CSF amyloid-β 1 to 42 peptide (Aβ42), total tau, phosphorylated tau and APOE4 genotype (Sachdev, 2013; Thomas, 2017; Park, 2015).<br>
 
+![png](_pic/adni2.png)
+Source: ADNI, http://adni.loni.usc.edu/
 
 ## 3. Modeling Approach and Project Trajectory: 
 Data was split into 75% training set (N=300) and 25% test set (N=100). Classification models were built with the training set and compared with the baseline model of all 0’s classifier. MCI conversion to CN is a dichotomous response variable (0=stable MCI; 1=MCI-reversion to CN), and therefore only classification models that are appropriate for binary outcome were considered, including logistic regression, linear discriminant analysis (LDA), KNN classifier, decision tree, random forest, and boosting classifier. Normalization was performed on the continuous predictors, and the optimal parameters for each of the classification models fitted were chosen using a 5-fold cross-validation procedure. The proportion of MCI reversions in our sample was only 7.25%. Therefore, considering the unbalanced dataset, true positive rate (TPR), false positive rate (FPR), and area under the curve (AUC) were calculated on the test set to assess the model performance. 
@@ -56,7 +62,8 @@ Our study has several limitations that should be considered in interpreting the 
 
 **Future work**<br>
 In light of the short-comings of the current study, we propose several methods that could have improved our project and possible extensions of the work. First, we had excluded from our models individuals who did not have complete data on baseline predictors, which largely reduced our final analytic sample size. Given a longer time frame, we would have performed imputation on those missing values, using a model-based approach. Second, we considered only predictors at baseline, and did not assess how measures of these predictors at other time points prior to the two year point or changes in these measures over time could improve the prediction accuracy. Using post-baseline measures that were taken prior to our outcome may have enabled us to include additional predictors, such as the Geriatric Depression Scale (GDS) score and the Neuropsychiatric Inventory (NPI) score, that did not have baseline measures for the ADNI 2 participants. With more predictors, we could have also implemented variable selection methods and/or regularization (i.e. LASSO and Ridge regression), in attempt to improve model fit and test accuracy. Third, a longer follow-up duration may better capture the true MCI reversions, given the slow progression of these cognitive changes in older individuals. We could have additionally examined MCI outcomes at 48 months and at the follow-up visits in ADNIGO. Future studies should validate these findings in a different population and can also develop a predictive model to determine predictors for the time to MCI reversion. 
-
+<br>
+<br>
 **References:** <br>
 1) Sachdev, P.S., Lipnicki, D.M., Crawford, J., Reppermund, S., Kochan, N.A., Trollor, J.N., Wen, W., Draper, B., Slavin, M.J., Kang, K. and Lux, O., 2013. Factors predicting reversion from mild cognitive impairment to normal cognitive functioning: a population-based study. PLoS One, 8(3), p.e59649.<br>
 2) Thomas, K.R., Eppig, J.S., Edmonds, E.C., Jak, A.J., Delano-Wood, L., Salmon, D.P., Edland, S.D. and Bondi, M.W., 2017. ARTIFICIALLY HIGH MCI DIAGNOSTIC STABILITY AND LOW REVERSION RATES IN THE ALZHEIMER'S DISEASE NEUROIMAGING INITIATIVE. Alzheimer's & Dementia: The Journal of the Alzheimer's Association, 13(7), pp.P817-P818.<br>
