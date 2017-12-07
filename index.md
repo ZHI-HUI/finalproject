@@ -13,6 +13,7 @@ title: "MCI reversion prediciton with Alzheimer's Disease Neuroimaigng Initiativ
 Problem Statement and Motivation: 
 In the current project, we plan to build and evaluate classification models to predict reversion from mild cognitive impairment (MCI) to normal cognitive functioning within 2 years using the ADNI (Alzheimer’s Disease Neuroimaging Initiative) database. MCI is defined as a transitional state between normal cognition and dementia. Much of the existing literature has aimed to determine the predictors of conversion from MCI to dementia, however, many MCI patients do not progress to AD and up to 55% revert back to a cognitively normal state. It is therefore crucial to identify important predictors of a good prognosis among patients with MCI, which may inform intervention targets. 						 			
 
+![png](_pic/mci.png)
 
 ## 1. Introduction and Description of Data:
 MCI, a high risk condition for dementia, is regarded as a transitional state between cognitive normal	and dementia. Prevalence of MCI reversion to normal has varied widely, ranging from 4 to 55%, and multiple explanations are proposed for this variability, including individuals being misclassified initially, having unstable MCI, and having true improvements in cognitive functioning upon follow-up. Identifying which individuals classified as MCI are more likely to revert could help optimise resource allocation among MCI patients, with those considered least likely to revert receiving greater levels of intervention and follow-up contact. Therefore, the aim of this project is to build predictive model for MCI reversion using a wide range of predictors including socio-demographic, clinical, genetic, imaging characteristics, and biospecimen biomarkers. 
@@ -27,12 +28,13 @@ While it is of great importance to understand which individuals with MCI have a 
 			
 After a thorough literature review, potential diagnostic and non-diagnostic predictors of MCI reversion to CN were chosen a priori for preliminary EDA and prediction modeling for MCI reversion at two years from baseline. These factors have previously been implicated in either MCI reversion or conversion, and include the following: 
 <br>
-*1) Demographic characteristics:* age, gender, ethnicity, race, education, and marital status;<br>
-*2) Clinical factors:* baseline blood glucose level, homocysteine level, body mass index (BMI); history of stroke; history of hypertension (Sachdev, 2013);<br>
-*3) Lifestyle factors:* baseline smoking, baseline alcohol abuse;<br>
-*4) Neurocognitive/neuropsychological assessments:* baseline Mini-Mental State Examination (MMSE) score, Auditory Verbal Learning Test (AVLT) scores, Alzheimer’s disease assessment scale-cognitive 11-item/13-item progression model (ADAS), Animal Fluency Test, Trail Making Tests A and B, Clinical Dementia Rating score (CDR-SB), Functional Activities Questionnaire (FAQ) (Ewer, 2012; Sachdev, 2013; Park, 2015). These tests assess different facets of cognitive performance, including daily functional ability, severity of cognitive impairment, verbal learning and fluency, and memory;<br>
-*5) Neuroimaging biomarkers:* baseline fluorodeoxyglucose 18F uptake on brain positron emission tomography (FDG-PET) (Park, 2015);<br>
-*6) Cerebrospinal fluid (CSF) biomarkers:* baseline CSF amyloid-β 1 to 42 peptide (Aβ42), total tau, phosphorylated tau and APOE4 genotype (Sachdev, 2013; Thomas, 2017; Park, 2015).<br>
+<br>
+**1) Demographic characteristics:** age, gender, ethnicity, race, education, and marital status;<br>
+**2) Clinical factors:** baseline blood glucose level, homocysteine level, body mass index (BMI); history of stroke; history of hypertension (Sachdev, 2013);<br>
+**3) Lifestyle factors:** baseline smoking, baseline alcohol abuse;<br>
+**4) Neurocognitive/neuropsychological assessments:** baseline Mini-Mental State Examination (MMSE) score, Auditory Verbal Learning Test (AVLT) scores, Alzheimer’s disease assessment scale-cognitive 11-item/13-item progression model (ADAS), Animal Fluency Test, Trail Making Tests A and B, Clinical Dementia Rating score (CDR-SB), Functional Activities Questionnaire (FAQ) (Ewer, 2012; Sachdev, 2013; Park, 2015). These tests assess different facets of cognitive performance, including daily functional ability, severity of cognitive impairment, verbal learning and fluency, and memory;<br>
+**5) Neuroimaging biomarkers:** baseline fluorodeoxyglucose 18F uptake on brain positron emission tomography (FDG-PET) (Park, 2015);<br>
+**6) Cerebrospinal fluid (CSF) biomarkers:** baseline CSF amyloid-β 1 to 42 peptide (Aβ42), total tau, phosphorylated tau and APOE4 genotype (Sachdev, 2013; Thomas, 2017; Park, 2015).<br>
 
 
 ## 3. Modeling Approach and Project Trajectory: 
@@ -46,16 +48,16 @@ Preliminary EDA was conducted on pre-selected predictors. For continuous predict
 
 Among the six classification models, the AdaBoost classifier with optimal maximum depth of 2 and optimal number of trees of 16 has the highest TPR of 0.6 and the highest test AUC of 0.88. Therefore, the AdaBoost classifier was selected as our final model.
 
-*Strengths*
+**Strengths**<br>
 The current study has several strengths, including a large sample of participants with MCI at baseline, consideration of a diverse range of neuropsychological, demographic, clinical, and biomarker factors that were measured using standardized assessments and protocols, and consideration of multiple classification models including logistic regression, LDA, KNN classifier, decision tree, random forest, and boosting classifier.
 
-*Limitations*
+**Limitations**<br>
 Our study has several limitations that should be considered in interpreting the results. First, the follow-up duration of two years was relatively short, therefore, the study time frame may have been insufficient to completely capture all MCI reversions to CN. Second, we restricted our analysis to those who had MCI at baseline, complete data on all predictors at baseline, and a follow-up diagnostic classification at the two-year follow-up. This may limit the generalizability of our results, if the individuals who were lost to follow-up were different from individuals remained in the analyses. Also, many predictors reported in previous studies had to be dropped from our modeling process due to a large number of missing values at baseline and/or lack of data collection in either ADNI 1 or ADNI 2, such as neuropsychological measures (including Trail Making Test and one measure of AVLT), diabetes, and neuropsychiatric inventory questionnaire score (NPIQ). Finally, ADNI does not routinely collect information on important variables such as lifestyle factors (e.g. physical activity, diet), social interaction and/or support, and personality traits, which may be predictive of MCI reversion rates. 
 
-*Future work*
+**Future work**<br>
 In light of the short-comings of the current study, we propose several methods that could have improved our project and possible extensions of the work. First, we had excluded from our models individuals who did not have complete data on baseline predictors, which largely reduced our final analytic sample size. Given a longer time frame, we would have performed imputation on those missing values, using a model-based approach. Second, we considered only predictors at baseline, and did not assess how measures of these predictors at other time points prior to the two year point or changes in these measures over time could improve the prediction accuracy. Using post-baseline measures that were taken prior to our outcome may have enabled us to include additional predictors, such as the Geriatric Depression Scale (GDS) score and the Neuropsychiatric Inventory (NPI) score, that did not have baseline measures for the ADNI 2 participants. With more predictors, we could have also implemented variable selection methods and/or regularization (i.e. LASSO and Ridge regression), in attempt to improve model fit and test accuracy. Third, a longer follow-up duration may better capture the true MCI reversions, given the slow progression of these cognitive changes in older individuals. We could have additionally examined MCI outcomes at 48 months and at the follow-up visits in ADNIGO. Future studies should validate these findings in a different population and can also develop a predictive model to determine predictors for the time to MCI reversion. 
 
-*References:*
+**References:** <br>
 1) Sachdev, P.S., Lipnicki, D.M., Crawford, J., Reppermund, S., Kochan, N.A., Trollor, J.N., Wen, W., Draper, B., Slavin, M.J., Kang, K. and Lux, O., 2013. Factors predicting reversion from mild cognitive impairment to normal cognitive functioning: a population-based study. PLoS One, 8(3), p.e59649.<br>
 2) Thomas, K.R., Eppig, J.S., Edmonds, E.C., Jak, A.J., Delano-Wood, L., Salmon, D.P., Edland, S.D. and Bondi, M.W., 2017. ARTIFICIALLY HIGH MCI DIAGNOSTIC STABILITY AND LOW REVERSION RATES IN THE ALZHEIMER'S DISEASE NEUROIMAGING INITIATIVE. Alzheimer's & Dementia: The Journal of the Alzheimer's Association, 13(7), pp.P817-P818.<br>
 3) Park, M.H. and Han, C., 2015. Is there an MCI reversion to cognitively normal? Analysis of Alzheimer's disease biomarkers profiles. International Psychogeriatrics, 27(3), pp.429-437.<br>
