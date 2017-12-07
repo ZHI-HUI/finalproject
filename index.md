@@ -27,12 +27,12 @@ While it is of great importance to understand which individuals with MCI have a 
 			
 After a thorough literature review, potential diagnostic and non-diagnostic predictors of MCI reversion to CN were chosen a priori for preliminary EDA and prediction modeling for MCI reversion at two years from baseline. These factors have previously been implicated in either MCI reversion or conversion, and include the following: 
 <br>
-1) Demographic characteristics: age, gender, ethnicity, race, education, and marital status;<br>
-2) Clinical factors: baseline blood glucose level, homocysteine level, body mass index (BMI); history of stroke; history of hypertension (Sachdev, 2013);<br>
-3) Lifestyle factors: baseline smoking, baseline alcohol abuse;<br>
-4) Neurocognitive/neuropsychological assessments: baseline Mini-Mental State Examination (MMSE) score, Auditory Verbal Learning Test (AVLT) scores, Alzheimer’s disease assessment scale-cognitive 11-item/13-item progression model (ADAS), Animal Fluency Test, Trail Making Tests A and B, Clinical Dementia Rating score (CDR-SB), Functional Activities Questionnaire (FAQ) (Ewer, 2012; Sachdev, 2013; Park, 2015). These tests assess different facets of cognitive performance, including daily functional ability, severity of cognitive impairment, verbal learning and fluency, and memory;<br>
-5) Neuroimaging biomarkers: baseline fluorodeoxyglucose 18F uptake on brain positron emission tomography (FDG-PET) (Park, 2015);<br>
-6) Cerebrospinal fluid (CSF) biomarkers: baseline CSF amyloid-β 1 to 42 peptide (Aβ42), total tau, phosphorylated tau and APOE4 genotype (Sachdev, 2013; Thomas, 2017; Park, 2015).<br>
+*1) Demographic characteristics:* age, gender, ethnicity, race, education, and marital status;<br>
+*2) Clinical factors:* baseline blood glucose level, homocysteine level, body mass index (BMI); history of stroke; history of hypertension (Sachdev, 2013);<br>
+*3) Lifestyle factors:* baseline smoking, baseline alcohol abuse;<br>
+*4) Neurocognitive/neuropsychological assessments:* baseline Mini-Mental State Examination (MMSE) score, Auditory Verbal Learning Test (AVLT) scores, Alzheimer’s disease assessment scale-cognitive 11-item/13-item progression model (ADAS), Animal Fluency Test, Trail Making Tests A and B, Clinical Dementia Rating score (CDR-SB), Functional Activities Questionnaire (FAQ) (Ewer, 2012; Sachdev, 2013; Park, 2015). These tests assess different facets of cognitive performance, including daily functional ability, severity of cognitive impairment, verbal learning and fluency, and memory;<br>
+*5) Neuroimaging biomarkers:* baseline fluorodeoxyglucose 18F uptake on brain positron emission tomography (FDG-PET) (Park, 2015);<br>
+*6) Cerebrospinal fluid (CSF) biomarkers:* baseline CSF amyloid-β 1 to 42 peptide (Aβ42), total tau, phosphorylated tau and APOE4 genotype (Sachdev, 2013; Thomas, 2017; Park, 2015).<br>
 
 
 ## 3. Modeling Approach and Project Trajectory: 
@@ -46,29 +46,29 @@ Preliminary EDA was conducted on pre-selected predictors. For continuous predict
 
 Among the six classification models, the AdaBoost classifier with optimal maximum depth of 2 and optimal number of trees of 16 has the highest TPR of 0.6 and the highest test AUC of 0.88. Therefore, the AdaBoost classifier was selected as our final model.
 
-#Strengths
+*Strengths*
 The current study has several strengths, including a large sample of participants with MCI at baseline, consideration of a diverse range of neuropsychological, demographic, clinical, and biomarker factors that were measured using standardized assessments and protocols, and consideration of multiple classification models including logistic regression, LDA, KNN classifier, decision tree, random forest, and boosting classifier.
 
-#Limitations
+*Limitations*
 Our study has several limitations that should be considered in interpreting the results. First, the follow-up duration of two years was relatively short, therefore, the study time frame may have been insufficient to completely capture all MCI reversions to CN. Second, we restricted our analysis to those who had MCI at baseline, complete data on all predictors at baseline, and a follow-up diagnostic classification at the two-year follow-up. This may limit the generalizability of our results, if the individuals who were lost to follow-up were different from individuals remained in the analyses. Also, many predictors reported in previous studies had to be dropped from our modeling process due to a large number of missing values at baseline and/or lack of data collection in either ADNI 1 or ADNI 2, such as neuropsychological measures (including Trail Making Test and one measure of AVLT), diabetes, and neuropsychiatric inventory questionnaire score (NPIQ). Finally, ADNI does not routinely collect information on important variables such as lifestyle factors (e.g. physical activity, diet), social interaction and/or support, and personality traits, which may be predictive of MCI reversion rates. 
 
-#Future work
+*Future work*
 In light of the short-comings of the current study, we propose several methods that could have improved our project and possible extensions of the work. First, we had excluded from our models individuals who did not have complete data on baseline predictors, which largely reduced our final analytic sample size. Given a longer time frame, we would have performed imputation on those missing values, using a model-based approach. Second, we considered only predictors at baseline, and did not assess how measures of these predictors at other time points prior to the two year point or changes in these measures over time could improve the prediction accuracy. Using post-baseline measures that were taken prior to our outcome may have enabled us to include additional predictors, such as the Geriatric Depression Scale (GDS) score and the Neuropsychiatric Inventory (NPI) score, that did not have baseline measures for the ADNI 2 participants. With more predictors, we could have also implemented variable selection methods and/or regularization (i.e. LASSO and Ridge regression), in attempt to improve model fit and test accuracy. Third, a longer follow-up duration may better capture the true MCI reversions, given the slow progression of these cognitive changes in older individuals. We could have additionally examined MCI outcomes at 48 months and at the follow-up visits in ADNIGO. Future studies should validate these findings in a different population and can also develop a predictive model to determine predictors for the time to MCI reversion. 
 
-#References:
-Sachdev, P.S., Lipnicki, D.M., Crawford, J., Reppermund, S., Kochan, N.A., Trollor, J.N., Wen, W., Draper, B., Slavin, M.J., Kang, K. and Lux, O., 2013. Factors predicting reversion from mild cognitive impairment to normal cognitive functioning: a population-based study. PLoS One, 8(3), p.e59649.
-Thomas, K.R., Eppig, J.S., Edmonds, E.C., Jak, A.J., Delano-Wood, L., Salmon, D.P., Edland, S.D. and Bondi, M.W., 2017. ARTIFICIALLY HIGH MCI DIAGNOSTIC STABILITY AND LOW REVERSION RATES IN THE ALZHEIMER'S DISEASE NEUROIMAGING INITIATIVE. Alzheimer's & Dementia: The Journal of the Alzheimer's Association, 13(7), pp.P817-P818.
-Park, M.H. and Han, C., 2015. Is there an MCI reversion to cognitively normal? Analysis of Alzheimer's disease biomarkers profiles. International Psychogeriatrics, 27(3), pp.429-437.	
-Ewers M, Walsh C, Trojanowski JQ, et al. Prediction of conversion from mild cognitive impairment to Alzheimer's disease dementia based upon biomarkers and neuropsychological test performance. Neurobiol Aging 2012;33:1203–1214 
-Kumar R, Jorm AF, Parslow RA, Sachdev PS (2006) Depression in mild cognitive impairment in a community sample of individuals 60–64 years old. Int Psychogeriatr 18: 471–480.
-Olazaran J, Torrero P, Cruz I, Aparicio E, Sanz A, et al. (2011) Mild cognitive impairment and dementia in primary care: the value of medical history. Fam Pract 28: 385–392.
-Wisotsky M, Friedman JH (1965) Problems of Psychologic Testing with Aged Patients in a Geriatric Mental Hygiene Clinic. J Am Geriatr Soc 13: 243–247.
-Petersen RC (2011) Clinical practice. Mild cognitive impairment. N Engl J Med 364: 2227–2234.
-Ganguli M, Snitz BE, Saxton JA, Chang C-CH, Lee C-W, et al. (2011) Outcomes of mild cognitive impairment by definition: a population study. Arch Neurol 68: 761–767.
-Dolcos S, MacDonald SW, Braslavsky A, Camicioli R, Dixon RA (2012) Mild cognitive impairment is associated with selected functional markers: integrating concurrent, longitudinal, and stability effects. Neuropsychology 26: 209–223.
-Koepsell TD, Monsell SE (2012) Reversion from mild cognitive impairment to normal or near-normal cognition: Risk factors and prognosis. Neurology 79: 1591–1598.
-Diniz BS, Nunes PV, Yassuda MS, Forlenza OV (2009) Diagnosis of mild cognitive impairment revisited after one year. Preliminary results of a prospective study. Dement Geriatr Cogn 27: 224–231.
-Loewenstein DA, Acevedo A, Small BJ, Agron J, Crocco E, et al. (2009) Stability of different subtypes of mild cognitive impairment among the elderly over a 2- to 3-year follow-up period. Dement Geriatr Cogn Disord 27: 418–423.
-Manly JJ, Tang MX, Schupf N, Stern Y, Vonsattel JP, et al. (2008) Frequency and course of mild cognitive impairment in a multiethnic community. Ann Neurol 63: 494–506.
-Tokuchi R, Hishikawa N, Kurata T, et al. Clinical and demographic predictors of mild cognitive impairment for converting to Alzheimer's disease and reverting to normal cognition. J Neurol Sci 2014
+*References:*
+1) Sachdev, P.S., Lipnicki, D.M., Crawford, J., Reppermund, S., Kochan, N.A., Trollor, J.N., Wen, W., Draper, B., Slavin, M.J., Kang, K. and Lux, O., 2013. Factors predicting reversion from mild cognitive impairment to normal cognitive functioning: a population-based study. PLoS One, 8(3), p.e59649.<br>
+2) Thomas, K.R., Eppig, J.S., Edmonds, E.C., Jak, A.J., Delano-Wood, L., Salmon, D.P., Edland, S.D. and Bondi, M.W., 2017. ARTIFICIALLY HIGH MCI DIAGNOSTIC STABILITY AND LOW REVERSION RATES IN THE ALZHEIMER'S DISEASE NEUROIMAGING INITIATIVE. Alzheimer's & Dementia: The Journal of the Alzheimer's Association, 13(7), pp.P817-P818.<br>
+3) Park, M.H. and Han, C., 2015. Is there an MCI reversion to cognitively normal? Analysis of Alzheimer's disease biomarkers profiles. International Psychogeriatrics, 27(3), pp.429-437.<br>
+4) Ewers M, Walsh C, Trojanowski JQ, et al. Prediction of conversion from mild cognitive impairment to Alzheimer's disease dementia based upon biomarkers and neuropsychological test performance. Neurobiol Aging 2012;33:1203–1214<br>
+5) Kumar R, Jorm AF, Parslow RA, Sachdev PS (2006) Depression in mild cognitive impairment in a community sample of individuals 60–64 years old. Int Psychogeriatr 18: 471–480.<br>
+6) Olazaran J, Torrero P, Cruz I, Aparicio E, Sanz A, et al. (2011) Mild cognitive impairment and dementia in primary care: the value of medical history. Fam Pract 28: 385–392.<br>
+7) Wisotsky M, Friedman JH (1965) Problems of Psychologic Testing with Aged Patients in a Geriatric Mental Hygiene Clinic. J Am Geriatr Soc 13: 243–247.<br>
+8) Petersen RC (2011) Clinical practice. Mild cognitive impairment. N Engl J Med 364: 2227–2234.<br>
+9) Ganguli M, Snitz BE, Saxton JA, Chang C-CH, Lee C-W, et al. (2011) Outcomes of mild cognitive impairment by definition: a population study. Arch Neurol 68: 761–767.<br>
+10) Dolcos S, MacDonald SW, Braslavsky A, Camicioli R, Dixon RA (2012) Mild cognitive impairment is associated with selected functional markers: integrating concurrent, longitudinal, and stability effects. Neuropsychology 26: 209–223.<br>
+11) Koepsell TD, Monsell SE (2012) Reversion from mild cognitive impairment to normal or near-normal cognition: Risk factors and prognosis. Neurology 79: 1591–1598.<br>
+12) Diniz BS, Nunes PV, Yassuda MS, Forlenza OV (2009) Diagnosis of mild cognitive impairment revisited after one year. Preliminary results of a prospective study. Dement Geriatr Cogn 27: 224–231.<br>
+13) Loewenstein DA, Acevedo A, Small BJ, Agron J, Crocco E, et al. (2009) Stability of different subtypes of mild cognitive impairment among the elderly over a 2- to 3-year follow-up period. Dement Geriatr Cogn Disord 27: 418–423.<br>
+14) Manly JJ, Tang MX, Schupf N, Stern Y, Vonsattel JP, et al. (2008) Frequency and course of mild cognitive impairment in a multiethnic community. Ann Neurol 63: 494–506.<br>
+15) Tokuchi R, Hishikawa N, Kurata T, et al. Clinical and demographic predictors of mild cognitive impairment for converting to Alzheimer's disease and reverting to normal cognition. J Neurol Sci 2014. 
 		 							
