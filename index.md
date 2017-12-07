@@ -7,7 +7,7 @@ title: "MCI reversion prediciton with Alzheimer's Disease Neuroimaigng Initiativ
 *  
 {: toc}
 
-![png](index_files/brain.png)
+![jpg](_pic/brain.jpg)
 
 ## 0. Problem Statement and Motivation: 
 Problem Statement and Motivation: 
