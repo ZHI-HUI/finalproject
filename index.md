@@ -103,6 +103,6 @@ In conclusion, we have developed a machine learning model, specifically random f
 12) Diniz BS, Nunes PV, Yassuda MS, Forlenza OV (2009) Diagnosis of mild cognitive impairment revisited after one year. Preliminary results of a prospective study. Dement Geriatr Cogn 27: 224–231.<br>
 13) Loewenstein DA, Acevedo A, Small BJ, Agron J, Crocco E, et al. (2009) Stability of different subtypes of mild cognitive impairment among the elderly over a 2- to 3-year follow-up period. Dement Geriatr Cogn Disord 27: 418–423.<br>
 14) Manly JJ, Tang MX, Schupf N, Stern Y, Vonsattel JP, et al. (2008) Frequency and course of mild cognitive impairment in a multiethnic community. Ann Neurol 63: 494–506.<br>
-15) Tokuchi R, Hishikawa N, Kurata T, et al. Clinical and demographic predictors of mild cognitive impairment for converting to Alzheimer's disease and reverting to normal cognition. J Neurol Sci 2014. 
+15) Tokuchi R, Hishikawa N, Kurata T, et al. Clinical and demographic predictors of mild cognitive impairment for converting to Alzheimer's disease and reverting to normal cognition. J Neurol Sci 2014.<br>
 16) Moradi, E., Hallikainen, I., Hänninen, T., Tohka, J., and Alzheimer’s Disease Neuroimaging Initiative (2016). Rey’s auditory verbal learning test scores can be predicted from whole brain MRI in Alzheimer’s disease. Neuroimage Clin. 13, 415–427.
 		 							
