@@ -342,9 +342,8 @@ for attr_num in attr_nums:
 ```
 
 
-- ** Data was split into 60% training set and 40% test set. **
-- ** All continous variables were standardized:**
-<br/> The majority of classifiers calculate the distance between two points by the Euclidean distance. If one of the features has a broad range of values, the distance will be governed by this particular feature. We notice that the range of values of raw data varies widely, these continuous features should be normalized so that each feature contributes approximately proportionately to the final distance.
+- **Data was split into 60% training set and 40% test set.**
+- **All continous variables were standardized:** The majority of classifiers calculate the distance between two points by the Euclidean distance. If one of the features has a broad range of values, the distance will be governed by this particular feature. We notice that the range of values of raw data varies widely, these continuous features should be normalized so that each feature contributes approximately proportionately to the final distance.
 
 
 
@@ -589,8 +588,7 @@ auc_adaboost= metrics.roc_auc_score(y_train, adaboost.predict_proba(x_train)[:,1
 auc_adaboost_test= metrics.roc_auc_score(y_test, adaboost.predict_proba(x_test)[:,1])
 ```
 
-
-### Model Performance
+## 4. Model Performance
 
 
 
